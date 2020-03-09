@@ -33,7 +33,8 @@ class CalculatorDisplay extends React.Component {
     super(props, context)
     
     this.state = {
-      scale: 1
+      scale: 1,
+      history: [],
     }
   }
   
@@ -82,13 +83,13 @@ class CalculatorDisplay extends React.Component {
 
 const calculatorDisplayStyles = StyleSheet.create({
   root: {
-    backgroundColor: '#1c191c',
+    // backgroundColor: '#050619',
     flex: 1,
     justifyContent: 'center'
   },
   text: {
     alignSelf: 'flex-end',
-    color: 'white',
+    // color: 'white',
     fontSize: 20,
     paddingHorizontal: 30,
     right: 0,
@@ -126,15 +127,9 @@ class CalculatorKey extends React.Component {
 
 const calculatorKeyStyles = StyleSheet.create({
   root: {
-    width: 80,
-    height: 80,
     borderTopWidth: 0.5,
     borderTopColor: '#777',
-    // borderTopStyle: 'solid',
-    borderRightWidth: 0.5,
     borderRightColor: '#666',
-    // borderTopStyle: 'solid',
-    // outline: 'none'
   },
   text: {
     lineHeight: 80,
@@ -238,7 +233,7 @@ class Calculator extends React.Component {
     }
   }
   
-  performOperation(nextOperator) {    
+  performOperation(nextOperator) {  S  
     const { value, displayValue, operator } = this.state
     const inputValue = parseFloat(displayValue)
     
@@ -366,8 +361,6 @@ const calculatorStyles = StyleSheet.create({
   root: {
     width: '100%',
     height: '100%',
-    // backgroundColor: 'black',
-    // boxShadow: '0px 0px 20px 0px #aaa'
   },
   keypad: {
     height: 400,
@@ -381,7 +374,7 @@ const calculatorStyles = StyleSheet.create({
     fontSize: 12
   },
   functionKeys: {
-    backgroundColor:'#ceb169',
+    // backgroundColor:'#ceb169',
     flexDirection: 'row',
     color:'#fff',
     
@@ -403,14 +396,14 @@ const calculatorStyles = StyleSheet.create({
     fontSize: 18                        
   },
   operatorKeys: {
-    backgroundColor:'#ceb169'
+    // backgroundColor:'#ceb169'
     // backgroundImage: 'linear-gradient(to bottom, rgba(252,156,23,1) 0%, rgba(247,126,27,1) 100%)'
   },
   operatorKey: {
     borderRightWidth: 0
   },
   operatorKeyText: {
-    color: 'white',
+    // color: 'white',
     fontSize: 18
   },
   keyMultiplyText: {
@@ -425,7 +418,7 @@ const calculatorStyles = StyleSheet.create({
     width: deviceWidth/4
   },
   keyDotText: {
-    fontSize: 40,
+    fontSize: 20,
     marginTop: -10
   }
 })
